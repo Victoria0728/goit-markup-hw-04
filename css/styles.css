@@ -5,6 +5,7 @@
     --iris: #4D5AE5;
     --bgnavyblue: #2e2f42;
     --colorwhite: #fff;
+    --lightslate: #8E8F99;
 }
 /* styles for resetting the top padding of elements */
 h1,
@@ -164,11 +165,21 @@ p{
 
 /* Main hero section */
 .studiohero {
-display: block;
-padding-top: 120px;
-padding-bottom: 120px;
-flex-shrink: 0;
-background: var(--bgnavyblue);
+display: flex;
+margin-right: auto;
+margin-left: auto;
+background-color: var(--bgnavyblue);
+background-image: url("../images/herosection1.jpg");
+width: 1440px;
+background-size: cover;
+background-position: center;
+justify-content: center;
+background-repeat: no-repeat;
+padding-top: 260px;
+padding-bottom: 188px;
+
+
+
 }
 .studiohero h1 {
     margin: 0px;
@@ -229,6 +240,18 @@ background: var(--bgnavyblue);
     flex-basis: calc((100%-72px)/3);
 }  
 
+.studiofeature-ul .list img{
+    align-items: center;
+    justify-content: center;
+    width: 264px;
+    height: 112px;
+    background-color: var(--cloud);
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-bottom: 8px;
+    
+
+}
 
 .studiofeature-ul h3{
     width: 264px;
@@ -269,7 +292,7 @@ background: var(--bgnavyblue);
     border: 1px solid var(--cornflower);
     background: url(<path-to-image>), lightgray -72.845px -19px / 144.444% 112.667% no-repeat;
     flex-basis: calc((100%-48px)/2);
-    
+    box-shadow: 1px 0px 10px 1px lightgray;
 }
 
 
@@ -300,7 +323,6 @@ background: var(--bgnavyblue);
     text-transform: capitalize;
     margin-bottom: 72px;
    
-   
 }
 
 .studioteam-ul  {
@@ -314,20 +336,88 @@ background: var(--bgnavyblue);
 .studioteam- ul .list img{
     flex-basis: calc((100%-72px)/3);
     border-radius: 0px 0px 4px 4px;
-    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-
+    box-shadow: 0px 2px 2px 0px rgba(46, 47, 66, 0.08), 0px 1px 2px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+   
 }
 
 .teamcontent{
-    background-color:var(--primarybg);
+    background-color: var(--primarybg);
     padding: 32px 16px;
-    border-top: 0;
-    border: 1px solid #eeee;
+    /* border-top: 0;
+    border: 1px solid #eeee; */
     text-align: center;
+}
+.teamcontent h3{
+    margin-bottom: 8px;
 }
 
 
 .studioteam-ul .list:hover{
+    box-shadow: 1px 1px 5px 3px rgb(207, 66, 184);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+
+
+/* links SVG */
+
+.teamlink{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 24px;
+    padding: 0;
+}
+.teamlinks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color:var(--iris) ;
+    border-radius: 20px;
+    margin-top: 8px;
+}
+
+/* custumer Section */
+
+.clientsection h2{
+    color: var(--NAVY-BLUE, #2E2F42);
+    text-align: center;
+        /* Header 2 */
+    font-family: inherit;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+        /* 111.111% */
+    letter-spacing: 0.72px;
+    text-transform: capitalize;
+    margin-bottom: 72px;
+}
+
+.clientsection-ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 0;
+
+}
+
+.clientsection-ul .list img {
+    flex-basis: calc((100%-120px)/5);
+    align-items: center;
+    justify-content: center;
+    width: 168px;
+    height: 88px;
+    border-radius: 4px;
+    border: 1px solid var(--LIGHT-SLATE, #8E8F99);
+    padding: 16px 32px;
+
+}
+.clientsection-ul .list:hover{
     box-shadow: 1px 1px 5px 3px rgb(207, 66, 184);
     cursor: pointer;
     transition: 0.5s;
@@ -341,10 +431,9 @@ background: var(--bgnavyblue);
     background: var(--bgnavyblue);
     padding-top: 120px;
     padding-bottom: 120px;
+   
 
 }
-
-
 
 .mainfoot .web {
     width: 44px;
@@ -370,16 +459,48 @@ background: var(--bgnavyblue);
     padding-right: 76px;
     display: flex;
     height: 21px;
-
-
-   
+  
 }
+.footer{
+   width: 30%;
+    float: left;
+}
+.footlink{
+    width: 70%;
+    float: right;
 
+}
 .mainfoot p {
     color: var(--cloud);
     width: 264px;
+    margin-top: 16px;
 }
 
+.footlink h3{
+    color: var(--WHITE, #FFF);
+        /* Body Medium */
+        font-family: 'Roboto';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        /* 150% */
+        letter-spacing: 0.32px;      
+}
+
+.sociallink{
+    padding: 0;
+  
+}
+.sociallink .list{
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.sociallink .list .teamlinks{
+    margin-top: 16px;
+}
 
 
 
