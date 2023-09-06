@@ -430,20 +430,20 @@ padding-bottom: 188px;
     border: 1px solid var(--LIGHT-SLATE, #8E8F99);
 }
 
-
-.clientsection-ul .list:active,
-.clientsection-ul .list:hover {
-    fill: var(--ocean);
+.clientsection-ul .list svg:hover{
     border-radius: 4px;
     border: 2px solid var(--ocean);
     cursor: pointer;
     transition: 0.5s;
 }
-clientsection-ul .list:focus{
-    border-radius: 4px;
-    border: 2px solid var(--ocean);
-    cursor: pointer;
-    transition: 0.5s;
+
+.clientsection-ul .list:active,
+.clientsection-ul .list:hover         
+{
+    fill: var(--ocean);   
+}
+.clientsection-ul .list:focus{
+    fill: var(--ocean)
 }
 
 .mainfoot {
@@ -528,13 +528,17 @@ clientsection-ul .list:focus{
     color: var(--iris);
 }
 .sociallink .teamlinks:active,
-.sociallink .teamlinks:hover,
- .sociallink.teamlinks:focus{
+.sociallink .teamlinks:hover{
 
     background-color: var(--green);
     cursor: pointer;
     transition: 0.5s;
 }
+
+.sociallink .teamlinks:focus{
+    background-color: var(--green);
+}
+  
 
 .footlink h3:hover{
     color: var(--iris);
